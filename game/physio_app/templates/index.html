@@ -1,455 +1,449 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
-  
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<html lang="zxx">
 
-    <!-- 
-    - primary meta tags
-  -->
-    <title>GAME PHYSIO</title>
-    <meta name="title" content="Unigine - Epic Games Made For True Gamers!" />
-    <meta
-      name="description"
-      content="This is an esports and gaming html template made by Muhammad Sami"
-    />
+<head>
+    <title>Game Warrior Template</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Game Warrior Template">
+    <meta name="keywords" content="warrior, game, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link href="{% static 'assets/img/favicon.ico' %}" rel="shortcut icon" />
 
-    <!-- 
-    - favicon
-  -->
-  <script type="text/javascript" src="{% static 'assets/js/script.js' %}"></script>
-  <link rel="shortcut icon" type="image/x-icon" href="{% static 'assets/img/logo.png' %}" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/font-awesome.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/owl.carousel.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/animate.css' %}" />
 
 
-    <!-- 
-    - google font link
-  -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Oxanium:wght@400;500;600;700&family=Work+Sans:wght@600&display=swap"
-      rel="stylesheet"
-    />
+    <!--[if lt IE 9]>
+	  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
 
-    <!-- 
-    - custom css link
-  -->
-  <link rel="stylesheet" href="{% static 'assets/css/style.css' %}" />
-  <link rel="stylesheet" href="{% static 'assets/css/rstyle.css' %}" />
+</head>
 
+<body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
 
-    <!-- 
-    - preload images
-  -->
-  <link rel="preload" as="image" href="{% static 'assets/img/logo.png' %}" />
-  <link rel="preload" as="image" href="{% static 'assets/img/hero-banner-bg.png' %}" />
-<!-- Your main HTML file -->
-<!-- Add this script at the end of your body or in the head section -->
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-      const registerButton = document.querySelector('[data-btn]');
-      
-      registerButton.addEventListener('click', function () {
-          window.location.href = 'register.html';
-      });
-  });
-</script>
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-      const buttons = document.querySelectorAll('[data-btn]');
-      
-      buttons.forEach(button => {
-          button.addEventListener('click', function () {
-              const targetUrl = this.getAttribute('href');
-              window.location.href = targetUrl;
-          });
-      });
-  });
-</script>
-  </head>
-<script type="text/javascript" src="{static 'assets/js/script.js' %}"> </script>
-  <body id="top">
-    <!-- 
-    - #HEADER
-  -->
-
-    <header class="header active" data-header>
-      <div class="container">
-        <a href="#" class="logo">
-          <img src="{% static 'assets/img/logo.png' %}" width="110" height="53" alt="unigine home" />
-        </a>
-
-        <nav class="navbar" data-navbar>
-          <ul class="navbar-list">
-            <li class="navbar-item">
-              <a href="#home" class="navbar-link" data-nav-link>home</a>
-            </li>
-
-            <li class="navbar-item">
-              <a href="#tournament" class="navbar-link" data-nav-link
-                >GAME SELECTION</a
-              >
-            </li>
-
-            <li class="navbar-item">
-              <a href="#news" class="navbar-link" data-nav-link
-                >Dashboard
-              </a>
-            </li>
-
-            <li class="navbar-item">
-              <a href="#contact" class="navbar-link" data-nav-link>contact</a>
-            </li>
-          </ul>
-        </nav>
-
-        <a href="{% url 'register' %}" class="btn" data-btn>REGISTER NOW</a>
-        <a href="{% url 'login' %}" class="btn" data-btn>LOGIN</a>
-        <!-- <button class="nav-toggle-btn" aria-label="toggle menu" data-nav-toggler>
-          <span class="line line-1"></span>
-          <span class="line line-2"></span>
-          <span class="line line-3"></span> -->
-      <!-- </button>
-        <button
-          class="nav-toggle-btn"
-          aria-label="toggle menu"
-          data-nav-toggler
-        >
-          <span class="line line-1"></span>
-          <span class="line line-2"></span>
-          <span class="line line-3"></span>
-        </button> -->
-      </div>
-    </header>
-
-    <main>
-      <article>
-        <!-- 
-        - #HERO
-      -->
-
-        <div class="hero has-before" id="home">
-          <div class="container">
-            <p class="section-subtitle" style="color: black;">Enjoy The Gaming Therapy</p>
-
-            <h1 class="h1 title hero-title"  style="color: black;" >
-              Health Centric Games Made <br />
-              for enjoyable therapy sessions
-            </h1>
-
-            <a href="#" class="btn" data-btn>Begin your session</a>
-
-            <div class="hero-banner">
-              <img
-                src="{% static 'assets/img/hero-banner.png' %}"
-                width="850"
-                height="414"
-                alt="hero banner"
-                class="w-100"
-                
-              /><img src="{% static 'assets/img/hero-banner-bg.png' %}" alt="" class="hero-banner-bg" />
-            </div>
-          </div>
-        </div>
-
-  <!-- 
-        - #UPCOMING
-  -->
-   
-  <section  class="section upcoming" aria-labelledby="upcoming-label" id="tournament" >
-    <div class="container">
-      <p class="section-subtitle" id="upcoming-label"  style="color: black; font-weight: bolder;"> Interactive Gameplay </p>
-      <p class="section-text">
-        Our success in revolutionizing physiotherapy is due in large part to our talented and highly committed team.
-      </p>
-      <ol class="upcoming-list">
-        <li class="upcoming-item">
-          <div class="upcoming-card left has-before"> 
-             <img src="{% static 'assets/img/team-logo-1.png'%}" alt="" class="card-banner" width="86px" height="81px" loading="lazy" >
-          </div>
-          
-    
-
-          <div class="upcoming-time">
-            <time class="time" datetime="10:00"></time>
-            <time class="date" datetime="2022-05-25"></time>
-            <div class="social-wrapper">
-              <a href="#" class="social-link">
-                <ion-icon name="logo-youtube"></ion-icon>
-              </a>
-              <a href="#" class="social-link">
-                <ion-icon name="logo-twitch"></ion-icon>
-              </a>
-            </div>
-          </div>  
-
-          <div class="upcoming-card right has-before">
-            <img src="{% static 'assets/img/team-logo-2.png'%}" class="card-banner" width="90" height="81" alt="Trigger Brain Squad" />
-          </div> 
-        </li>  
-
-        <li class="upcoming-item">
-          <div class="upcoming-card left has-before">
-            <img src="{% static 'assets/img/team-logo-3.png'%}" class="card-banner" width="90" height="81" alt="Trigger Brain Squad" />
-          </div> 
-
-          <div class="upcoming-time">
-            <time class="time" datetime="10:00"></time>
-            <time class="date" datetime="2022-05-25"></time>
-            <div class="social-wrapper">
-              <a href="#" class="social-link">
-                <ion-icon name="logo-youtube"></ion-icon>
-              </a>
-              <a href="#" class="social-link">
-                <ion-icon name="logo-twitch"></ion-icon>
-              </a>
-            </div>
-          </div>  
-
-          <div class="upcoming-card right has-before">
-            <img src="{% static 'assets/img/team-logo-4.png'%}" class="card-banner" width="90" height="81" alt="Trigger Brain Squad" />
-          </div>
-        </li>
-        <li class="upcoming-item">
-          <div class="upcoming-card left has-before">
-            <img src="{% static 'assets/img/team-logo-5.png'%}" class="card-banner" width="90" height="81" alt="Trigger Brain Squad" />
-          </div> 
-
-          <div class="upcoming-time">
-            <time class="time" datetime="10:00"></time>
-            <time class="date" datetime="2022-05-25"></time>
-            <div class="social-wrapper">
-              <a href="#" class="social-link">
-                <ion-icon name="logo-youtube"></ion-icon>
-              </a>
-              <a href="#" class="social-link">
-                <ion-icon name="logo-twitch"></ion-icon>
-              </a>
-            </div>
-          </div>  
-
-          <div class="upcoming-card right has-before">
-            <img src="{% static 'assets/img/team-logo-6.png'%}" class="card-banner" width="90" height="81" alt="Trigger Brain Squad" />
-          </div>
-        </li>
-    </div>  
-  </section>
-
-  <!-- 
-        - #NEWS
-      -->
-
-      <section class="section news" aria-label="our latest news" id="news">
+    <!-- Header section -->
+    <header class="header-section">
         <div class="container">
-          <p class="section-subtitle"></p>
-          <h2 class="h2 section-title">
-            Our <span class="span">Services</span>
-          </h2>
-          <p class="section-text">
-            Our success in revolutionizing physiotherapy is due in large part
-            to our talented and highly committed team.
-          </p>
-
-          <ul class="news-list">
-            <li>
-              <div class="news-card">
-                <figure class="card-banner img-holder" style="--width: 600; --height: 400">
-                  <img src="{% static 'assets/img/news-1.jpg' %}" class="img-cover" alt="Innovative Business All Over The World" width="600px" height="400px">
-                </figure>
-                <div class="card-content">
-                  <a href="#" class="card-tag">Business</a>
-                  <a href="#" class="link has-before"></a>
-                </div>  
-              </div>
-            </li> 
-
-            <li>
-              <div class="news-card">
-                <figure class="card-banner img-holder" style="--width: 600; --height: 426">
-                  <img src="{% static 'assets/img/news-2.jpg' %}" class="img-cover" alt="How To Start Initiating An Startup In Few Days" width="600px" height="400px">
-                </figure>
-                <div class="card-content">
-                  <a href="#" class="card-tag">Startup</a>
-                </div>  
-              </div>
-            </li>
-
-            <li>
-              <div class="news-card">
-                <figure class="card-banner img-holder" style="--width: 600; --height: 426">
-                  <img src="{% static 'assets/img/news-3.jpg' %}" class="img-cover" alt="Financial Experts Support Help You To Find Out" width="600px" height="400px">
-                </figure>
-                <div class="card-content">
-                  <a href="#" class="card-tag">Finance</a>
-                </div>  
-              </div>
-            </li>
-
-          </ul>   
-          
-    <!-- 
-    - #FOOTER
-  -->
-
-    <footer class="footer" id="contact">
-      <div class="section footer-top">
-        <div class="container">
-          <div class="footer-brand">
-            <a href="#" class="logo">
-              <img
-                src="{% static 'assets/img/logo.png' %}"
-                width="150"
-                height="73"
-                loading="lazy"
-                alt="Unigine logo"
-              />
+            <!-- logo -->
+            <a class="site-logo" href="index.html">
+                <img src="{% static 'assets/img/logo.png' %}" alt="">
             </a>
-
-            <p class="footer-text">
-
-Our success in revolutionizing physiotherapy is due in large part to our talented and highly committed team.
-            </p>
-
-            <ul class="social-list">
-              <li>
-                <a href="#" class="social-link">
-                  <ion-icon name="logo-facebook"></ion-icon>
-                </a>
-              </li>
-
-              <li>
-                <a href="#" class="social-link">
-                  <ion-icon name="logo-twitter"></ion-icon>
-                </a>
-              </li>
-
-              <li>
-                <a href="#" class="social-link">
-                  <ion-icon name="logo-instagram"></ion-icon>
-                </a>
-              </li>
-
-              <li>
-                <a href="#" class="social-link">
-                  <ion-icon name="logo-youtube"></ion-icon>
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div class="footer-list">
-            <p class="title footer-list-title has-after" style="color: black;">Usefull Links</p>
-
-            
-
-              <li>
-                <a href="#" class="footer-link">Help Center</a>
-              </li>
-
-              <li>
-                <a href="#" class="footer-link">Privacy and Policy</a>
-              </li>
-
-              <li>
-                <a href="#" class="footer-link">Terms of Use</a>
-              </li>
-
-              <li>
-                <a href="#" class="footer-link">Contact Us</a>
-              </li>
-            </ul>
-          </div>
-
-          <div class="footer-list">
-            <p class="title footer-list-title has-after" style="color: black;">Contact Us</p>
-
-            <div class="contact-item">
-              <span class="span">Location:</span>
-
-              <address class="contact-link"></address>
+            <div class="user-panel">
+                <a href="#">Login</a> / <a href="#">Register</a>
             </div>
-
-            <div class="contact-item">
-              <span class="span">Join Us:</span>
-
-              <a href="mailto:Info@unigine.com" class="contact-link"
-                >Info@gamephysio.com</a
-              >
+            <!-- responsive -->
+            <div class="nav-switch">
+                <i class="fa fa-bars"></i>
             </div>
-
-            <div class="contact-item">
-              <span class="span">Phone:</span>
-
-              <a href="tel:+12345678910" class="contact-link">+91 0000000000</a>
-            </div>
-          </div>
-
-          <div class="footer-list">
-            <p class="title footer-list-title has-after" style="color: black;">Newsletter Signup</p>
-            <form action="emailsaving" method="POST" class="footer-form">
-              {% csrf_token %}
-              <input  class="input-field" placeholder="Your Email" type="email" name="email_address" autocomplete="off" style="color: black;" required/>
-              {{msg}}
-              <button type="submit" class="btn" data-btn>Subscribe Now</button>
-            </form>
-          </div>
+            <!-- site menu -->
+            <nav class="main-menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="review.html">Games</a></li>
+                    <li><a href="categories.html">Blog</a></li>
+                    <li><a href="community.html">Forums</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
         </div>
-      </div>
-
-  
-      </div>
+    </header>
+    <!-- Header section end -->
 
 
-     
-<!-- 
-      <div class="footer-bottom">
+    <!-- Hero section -->
+    <section class="hero-section">
+        <div class="hero-slider owl-carousel">
+            <div class="hs-item set-bg" data-setbg="{% static 'assets/img/slider-1.jpg' %}">
+                <div class="hs-text">
+                    <div class="container">
+                        <h2>The Best <span>Games</span> Out There</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada <br> lorem maximus
+                            mauris scelerisque, at rutrum nulla dictum. Ut ac ligula sapien. <br>Suspendisse cursus
+                            faucibus finibus.</p>
+                        <a href="#" class="site-btn">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="hs-item set-bg" data-setbg="{% static 'assets/img/slider-2.jpg' %}">
+                <div class="hs-text">
+                    <div class="container">
+                        <h2>The Best <span>Games</span> Out There</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada <br> lorem maximus
+                            mauris scelerisque, at rutrum nulla dictum. Ut ac ligula sapien. <br>Suspendisse cursus
+                            faucibus finibus.</p>
+                        <a href="#" class="site-btn">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Hero section end -->
+
+
+    <!-- Latest news section -->
+    <div class="latest-news-section">
+        <div class="ln-title">Latest News</div>
+        <div class="news-ticker">
+            <div class="news-ticker-contant">
+                <div class="nt-item"><span class="new">new</span>Lorem ipsum dolor sit amet, consectetur adipiscing
+                    elit. </div>
+                <div class="nt-item"><span class="strategy">strategy</span>Isum dolor sit amet, consectetur adipiscing
+                    elit. </div>
+                <div class="nt-item"><span class="racing">racing</span>Isum dolor sit amet, consectetur adipiscing elit.
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Latest news section end -->
+
+
+    <!-- Feature section -->
+    <section class="feature-section spad">
         <div class="container">
-          <p class="copyright"></p>
+            <div class="row">
+                <div class="col-lg-3 col-md-6 p-0">
+                    <div class="feature-item set-bg" data-setbg="{% static 'assets/img/features/1.jpg' %}">
+                        <span class="cata new">new</span>
+                        <div class="fi-content text-white">
+                            <h5><a href="#">Suspendisse ut justo tem por, rutrum</a></h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                            <a href="#" class="fi-comment">3 Comments</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 p-0">
+                    <div class="feature-item set-bg" data-setbg="{% static 'assets/img/features/2.jpg' %}">
+                        <span class="cata strategy">strategy</span>
+                        <div class="fi-content text-white">
+                            <h5><a href="#">Justo tempor, rutrum erat id, molestie</a></h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                            <a href="#" class="fi-comment">3 Comments</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 p-0">
+                    <div class="feature-item set-bg" data-setbg="{% static 'assets/img/features/3.jpg' %}">
+                        <span class="cata new">new</span>
+                        <div class="fi-content text-white">
+                            <h5><a href="#">Nullam lacinia ex eleifend orci porttitor</a></h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                            <a href="#" class="fi-comment">3 Comments</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 p-0">
+                    <div class="feature-item set-bg" data-setbg="{% static 'assets/img/features/4.jpg' %}">
+                        <span class="cata racing">racing</span>
+                        <div class="fi-content text-white">
+                            <h5><a href="#">Lacinia ex eleifend orci suscipit</a></h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                            <a href="#" class="fi-comment">3 Comments</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div> -->
+    </section>
+    <!-- Feature section end -->
+
+
+    <!-- Recent game section  -->
+    <section class="recent-game-section spad set-bg" data-setbg="{% static 'assets/img/recent-game-bg.png' %}">
+        <div class="container">
+            <div class="section-title">
+                <div class="cata new">new</div>
+                <h2>Recent Games</h2>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="recent-game-item">
+                        <div class="rgi-thumb set-bg" data-setbg="{% static 'assets/img/recent-game/1.jpg' %}">
+                            <div class="cata new">new</div>
+                        </div>
+                        <div class="rgi-content">
+                            <h5>Suspendisse ut justo tem por, rutrum</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisc ing ipsum dolor sit amet, consectetur
+                                elit. </p>
+                            <a href="#" class="comment">3 Comments</a>
+                            <div class="rgi-extra">
+                                <div class="rgi-star"><img src="{% static 'assets/img/icons/star.png' %}" alt=""></div>
+                                <div class="rgi-heart"><img src="{% static 'assets/img/icons/heart.png' %}" alt=""></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="recent-game-item">
+                        <div class="rgi-thumb set-bg" data-setbg="{% static 'assets/img/recent-game/2.jpg' %}">
+                            <div class="cata racing">racing</div>
+                        </div>
+                        <div class="rgi-content">
+                            <h5>Susce pulvinar metus nulla, vel facilisis sem </h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisc ing ipsum dolor sit amet, consectetur
+                                elit. </p>
+                            <a href="#" class="comment">3 Comments</a>
+                            <div class="rgi-extra">
+                                <div class="rgi-star"><img src="{% static 'assets/img/icons/star.png' %}" alt=""></div>
+                                <div class="rgi-heart"><img src="{% static 'assets/img/icons/heart.png' %}" alt=""></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="recent-game-item">
+                        <div class="rgi-thumb set-bg" data-setbg="{% static 'assets/img/recent-game/3.jpg' %}">
+                            <div class="cata adventure">Adventure</div>
+                        </div>
+                        <div class="rgi-content">
+                            <h5>Suspendisse ut justo tem por, rutrum</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisc ing ipsum dolor sit amet, consectetur
+                                elit. </p>
+                            <a href="#" class="comment">3 Comments</a>
+                            <div class="rgi-extra">
+                                <div class="rgi-star"><img src="{% static 'assets/img/icons/star.png' %}" alt=""></div>
+                                <div class="rgi-heart"><img src="{% static 'assets/img/icons/heart.png' %}" alt=""></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Recent game section end -->
+
+
+    <!-- Tournaments section -->
+    <section class="tournaments-section spad">
+        <div class="container">
+            <div class="tournament-title">Tournaments</div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="tournament-item mb-4 mb-lg-0">
+                        <div class="ti-notic">Premium Tournament</div>
+                        <div class="ti-content">
+                            <div class="ti-thumb set-bg" data-setbg="{% static 'assets/img/tournament/1.jpg' %}"></div>
+                            <div class="ti-text">
+                                <h4>World Of WarCraft</h4>
+                                <ul>
+                                    <li><span>Tournament Beggins:</span> June 20, 2018</li>
+                                    <li><span>Tounament Ends:</span> July 01, 2018</li>
+                                    <li><span>Participants:</span> 10 teams</li>
+                                    <li><span>Tournament Author:</span> Admin</li>
+                                </ul>
+                                <p><span>Prizes:</span> 1st place $2000, 2nd place: $1000, 3rd place: $500</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="tournament-item">
+                        <div class="ti-notic">Premium Tournament</div>
+                        <div class="ti-content">
+                            <div class="ti-thumb set-bg" data-setbg="{% static 'assets/img/tournament/2.jpg' %}"></div>
+                            <div class="ti-text">
+                                <h4>DOOM</h4>
+                                <ul>
+                                    <li><span>Tournament Beggins:</span> June 20, 2018</li>
+                                    <li><span>Tounament Ends:</span> July 01, 2018</li>
+                                    <li><span>Participants:</span> 10 teams</li>
+                                    <li><span>Tournament Author:</span> Admin</li>
+                                </ul>
+                                <p><span>Prizes:</span> 1st place $2000, 2nd place: $1000, 3rd place: $500</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Tournaments section bg -->
+
+
+    <!-- Review section -->
+    <section class="review-section spad set-bg" data-setbg="{% static 'assets/img/review-bg.png' %}">
+        <div class="container">
+            <div class="section-title">
+                <div class="cata new">new</div>
+                <h2>Recent Reviews</h2>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="review-item">
+                        <div class="review-cover set-bg" data-setbg="{% static 'assets/img/review/1.jpg' %}">
+                            <div class="score yellow">9.3</div>
+                        </div>
+                        <div class="review-text">
+                            <h5>Assasin’’s Creed</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisc ing ipsum dolor sit ame.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="review-item">
+                        <div class="review-cover set-bg" data-setbg="{% static 'assets/img/review/2.jpg' %}">
+                            <div class="score purple">9.5</div>
+                        </div>
+                        <div class="review-text">
+                            <h5>Doom</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisc ing ipsum dolor sit ame.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="review-item">
+                        <div class="review-cover set-bg" data-setbg="{% static 'assets/img/review/3.jpg' %}">
+                            <div class="score green">9.1</div>
+                        </div>
+                        <div class="review-text">
+                            <h5>Overwatch</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisc ing ipsum dolor sit ame.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="review-item">
+                        <div class="review-cover set-bg" data-setbg="{% static 'assets/img/review/4.jpg' %}">
+                            <div class="score pink">9.7</div>
+                        </div>
+                        <div class="review-text">
+                            <h5>GTA</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisc ing ipsum dolor sit ame.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Review section end -->
+
+
+    <!-- Footer top section -->
+    <section class="footer-top-section">
+        <div class="container">
+            <div class="footer-top-bg">
+                <img src="{% static 'assets/img/footer-top-bg.png' %}" alt="">
+            </div>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="footer-logo text-white">
+                        <img src="{% static 'assets/img/footer-logo.png' %}" alt="">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisc ing ipsum dolor sit ame.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-widget mb-5 mb-md-0">
+                        <h4 class="fw-title">Latest Posts</h4>
+                        <div class="latest-blog">
+                            <div class="lb-item">
+                                <div class="lb-thumb set-bg" data-setbg="{% static 'assets/img/latest-blog/1.jpg' %}"></div>
+                                <div class="lb-content">
+                                    <div class="lb-date">June 21, 2018</div>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisc ing ipsum </p>
+                                    <a href="#" class="lb-author">By Admin</a>
+                                </div>
+                            </div>
+                            <div class="lb-item">
+                                <div class="lb-thumb set-bg" data-setbg="{% static 'assets/img/latest-blog/2.jpg' %}"></div>
+                                <div class="lb-content">
+                                    <div class="lb-date">June 21, 2018</div>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisc ing ipsum </p>
+                                    <a href="#" class="lb-author">By Admin</a>
+                                </div>
+                            </div>
+                            <div class="lb-item">
+                                <div class="lb-thumb set-bg" data-setbg="{% static 'assets/img/latest-blog/3.jpg' %}"></div>
+                                <div class="lb-content">
+                                    <div class="lb-date">June 21, 2018</div>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisc ing ipsum </p>
+                                    <a href="#" class="lb-author">By Admin</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-widget">
+                        <h4 class="fw-title">Top Comments</h4>
+                        <div class="top-comment">
+                            <div class="tc-item">
+                                <div class="tc-thumb set-bg" data-setbg="{% static 'assets/img/authors/1.jpg' %}"></div>
+                                <div class="tc-content">
+                                    <p><a href="#">James Smith</a> <span>on</span> Lorem ipsum dolor sit amet, co</p>
+                                    <div class="tc-date">June 21, 2018</div>
+                                </div>
+                            </div>
+                            <div class="tc-item">
+                                <div class="tc-thumb set-bg" data-setbg="{% static 'assets/img/authors/2.jpg' %}"></div>
+                                <div class="tc-content">
+                                    <p><a href="#">James Smith</a> <span>on</span> Lorem ipsum dolor sit amet, co</p>
+                                    <div class="tc-date">June 21, 2018</div>
+                                </div>
+                            </div>
+                            <div class="tc-item">
+                                <div class="tc-thumb set-bg" data-setbg="{% static 'assets/img/authors/3.jpg' %}"></div>
+                                <div class="tc-content">
+                                    <p><a href="#">James Smith</a> <span>on</span> Lorem ipsum dolor sit amet, co</p>
+                                    <div class="tc-date">June 21, 2018</div>
+                                </div>
+                            </div>
+                            <div class="tc-item">
+                                <div class="tc-thumb set-bg" data-setbg="{% static 'assets/img/authors/4.jpg' %}"></div>
+                                <div class="tc-content">
+                                    <p><a href="#">James Smith</a> <span>on</span> Lorem ipsum dolor sit amet, co</p>
+                                    <div class="tc-date">June 21, 2018</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer top section end -->
+
+
+    <!-- Footer section -->
+    <footer class="footer-section">
+        <div class="container">
+            <ul class="footer-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="review.html">Games</a></li>
+                <li><a href="categories.html">Blog</a></li>
+                <li><a href="community.html">Forums</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <p class="copyright"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                Copyright &copy;
+                <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made
+                with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com"
+                    target="_blank">Colorlib</a>
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+        </div>
     </footer>
+    <!-- Footer section end -->
 
 
-    <p class="cp-text" style="background:rgba(162,162,243,255); text-align: center; padding:1.5%;margin-bottom: -151px;padding-left: 4%;margin-left: -202px;margin-right: -199px; font-weight: bold;">
-      © Copyright 2015 Company Name. All rights reserved.
-    </p>
-    <!-- 
-    - #BACK TO TOP
-  -->
+    <!--====== Javascripts & Jquery ======-->
+    <script src="{% static 'assets/js/jquery-3.2.1.min.js' %}"></script>
+    <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'assets/js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'assets/js/jquery.marquee.min.js' %}"></script>
+    <script src="{% static 'assets/js/main.js' %}"></script>
+</body>
 
-    <a
-      href="#top"
-      class="back-top-btn"
-      aria-label="back to top"
-      data-back-top-btn
-    >
-      <ion-icon name="arrow-up-outline" aria-hidden="true"></ion-icon>
-    </a>
-
-    <!-- 
-    - #CUSTOM CURSOR
-  -->
-
-    <div class="cursor" data-cursor></div>
-
-    <!-- 
-    - custom js link
-  -->
-    <script src="{% static 'script.js' %}"></script>
-
-    <!-- 
-    - ionicon link
-  -->
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-    ></script>
-  </body>
 </html>
